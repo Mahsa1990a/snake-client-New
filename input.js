@@ -12,6 +12,10 @@ const setupInput = function(conn) {
 };
 
 const handleUserInput = function(key, conn) { //function to contrlo cntrl+c
+
+  if (key === "m") {
+    conn.write("Say: hii")
+  }
   if (key === "w") {
     //console.log("up");
     conn.write("Move: up");
