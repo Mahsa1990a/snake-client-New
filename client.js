@@ -15,7 +15,29 @@ const connect = function() {
     //conn.write("from client: Successfully connected to game server");
     console.log("From client: Successfully connected to game server"); //print msg for players
 
-    conn.write("Move: up"); //after connecting do move up
+    //conn.write("Move: up"); //after connecting do move up(I used existing connect callback, but we can creat new one)
+    setTimeout(() => {
+      conn.write("Move: up");
+    }, 1000);
+    setTimeout(() => {
+      conn.write("Move: left");
+    }, 2000);
+    setTimeout(() => {
+      conn.write("Move: left");
+    }, 2500);
+    setTimeout(() => {
+      conn.write("Move: down");
+    }, 3000);
+    setTimeout(() => {
+      conn.write("Move: left");
+    }, 4000);
+    setTimeout(() => {
+      conn.write("Move: up");
+    }, 5000);
+    setTimeout(() => {
+      conn.write("Move: right");
+    }, 6000);
+    
   });
 
   conn.write("Name: Mah"); //syntax send data from client to server
