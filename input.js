@@ -16,4 +16,4 @@ const handleUserInput = function(key) { //function to contrlo cntrl+c
   }
 };
 
-module.exports = { setupInput,  handleUserInput };
+module.exports = { setupInput }; //don't need export handleUserInput, because only setupInput needs it.
