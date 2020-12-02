@@ -1,11 +1,12 @@
 // //A Separate Module For The TCP Connection
 
 const net = require('net');
+const { HOST, PORT } = require('./constants');
 
 const connect = function() {
   const conn = net.createConnection({ 
-    host: "localhost",
-    port: 50541
+    HOST,
+    PORT
   });
   
   // interpret incoming data as text
