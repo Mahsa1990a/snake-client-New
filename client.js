@@ -14,6 +14,8 @@ const connect = function() {
   conn.on('connect', () => {
     //conn.write("from client: Successfully connected to game server");
     console.log("From client: Successfully connected to game server"); //print msg for players
+
+    conn.write("Move: up"); //after connecting do move up
   });
 
   conn.write("Name: Mah"); //syntax send data from client to server
