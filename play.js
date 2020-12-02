@@ -15,7 +15,7 @@ const setupInput = function() {
   stdin.setEncoding('utf8');
   stdin.resume();
 
-  stdin.on('data', key => {
+  stdin.on('data', key => { //handlin cnrl+c manually
     if (key === '\u0003') {
       process.exit();
     }
